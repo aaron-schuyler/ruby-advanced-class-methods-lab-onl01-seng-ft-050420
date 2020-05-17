@@ -18,7 +18,9 @@ class Song
     self.new
   end
   def self.new_by_name(name)
+    if !@@all.include?(name)
     self.new(name)
+  end
   end
   def self.create_by_name(name)
     if !@@all.include?(name)
