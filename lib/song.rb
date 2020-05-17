@@ -35,5 +35,5 @@ class Song
     found
   end 
   def self.alphabetical
-    
+    @@all.sort
 end
