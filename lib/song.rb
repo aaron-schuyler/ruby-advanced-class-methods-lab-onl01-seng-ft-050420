@@ -36,7 +36,7 @@ class Song
     found
   end 
   def self.alphabetical
-    binding.pry
+    
     self.all.sort_by { |a| a.name}
   end
 end
