@@ -46,4 +46,5 @@ class Song
     name = filename[1].split(".")[0]
     created = self.new(name, artist_name)
     @@all << created
+  end
 end
