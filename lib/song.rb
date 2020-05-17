@@ -21,9 +21,11 @@ class Song
     self.new(name)
   end
   def self.create_by_name(name)
+    if !@@all.includ?(name)
     new_song = self.new(name)
     @@all << new_song
     new_song
+  end
   end
   def self.find_by_name(name)
     self.all.find {|s| s.name == name}
