@@ -16,6 +16,7 @@ class Song
   def self.create
     created = self.new
     @@all << created
+    created
   end
   def self.new_by_name(name)
     if !@@all.include?(name)
