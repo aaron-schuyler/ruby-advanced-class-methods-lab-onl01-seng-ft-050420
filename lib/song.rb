@@ -4,7 +4,8 @@ class Song
   def self.all
     @@all
   end
-
+  def initialize
+    @@all << self
   def save
     self.class.all << self
   end
