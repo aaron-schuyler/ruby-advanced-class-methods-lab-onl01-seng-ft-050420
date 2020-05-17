@@ -9,7 +9,6 @@ class Song
   def self.all
     @@all
   end
-
   def save
     self.class.all << self
   end
@@ -39,7 +38,12 @@ class Song
     found
   end 
   def self.alphabetical
-    
     self.all.sort_by { |a| a.name}
   end
+  def new_from_filename(filename)
+    filename.split(" - ")
+    artist_name = filename[0]
+    name = filename[1].split(".")[0]
+    created = self.new(name, artist_name)
+    @@all << created
 end
