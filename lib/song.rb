@@ -34,4 +34,6 @@ class Song
     end
     found
   end 
+  def self.alphabetical
+    
 end
