@@ -28,9 +28,9 @@ class Song
     self.all.find {|s| s.name == name}
   end
   def self.find_or_create_by_name(name)
-    found = self.all.find {|s| s.name == name}
+    found = find_by_name(name)
     if found == NIL
-      found = self.new(name)
+      found = self.new_by_name(name)
     end
     found
   end 
