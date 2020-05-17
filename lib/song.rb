@@ -37,6 +37,6 @@ class Song
   end 
   def self.alphabetical
     binding.pry
-    self.all.sort_by { |a,b| a.name <=> b.name}
+    self.all.sort_by { |a| a.name}
   end
 end
