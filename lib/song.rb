@@ -45,10 +45,14 @@ class Song
     artist_name = filename[0]
     name = filename[1].split(".")[0]
     created = self.new(name, artist_name)
-    @@all << created
     created
   end
   def self.create_from_filename(filename)
-    
+    filename = filename.split(" - ")
+    artist_name = filename[0]
+    name = filename[1].split(".")[0]
+    created = self.new(name, artist_name)
+    @@all << created
+    created
   end 
 end
