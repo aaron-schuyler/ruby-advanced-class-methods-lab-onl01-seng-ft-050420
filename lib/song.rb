@@ -6,6 +6,7 @@ class Song
   end
   def initialize
     @@all << self
+  end
   def save
     self.class.all << self
   end
