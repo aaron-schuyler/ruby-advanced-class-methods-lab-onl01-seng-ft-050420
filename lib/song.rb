@@ -5,7 +5,6 @@ class Song
   def initialize(name="", artist="")
     @artist_name = artist
     @name = name
-    @@all << self
   end
   def self.all
     @@all
@@ -23,11 +22,9 @@ class Song
   end
   end
   def self.create_by_name(name)
-    if !@@all.include?(name)
     new_song = self.new(name)
     @@all << new_song
     new_song
-  end
   end
   def self.find_by_name(name)
     self.all.find {|s| s.name == name}
