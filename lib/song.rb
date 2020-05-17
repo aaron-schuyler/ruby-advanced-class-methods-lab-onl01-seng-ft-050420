@@ -55,4 +55,7 @@ class Song
     @@all << created
     created
   end 
+  def self.destroy_all
+    @@all = []
+  end
 end
